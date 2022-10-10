@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .bg-image {
+           background-image: url('https://d39l2hkdp2esp1.cloudfront.net/img/photo/124726/124726_00_2x.jpg'); 
+           height:100vh; 
+           background-position: center; 
+           background-repeat: no-repeat; 
+           background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="bg-image"><br><br>
+        <div class="container">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                  <div class="text-white">
+                    <h1 class="mb-3">Daily Activity & Calorie Tracker</h1>
+                    <h4 class="mb-3">Record your activities, and total calories per excercise.</h4>
+                  </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group">   <!--this create form with date-->
+                                <label for="new-start-date">Start Date</label>
+                                <input type="date" class="form-control" id="new-start-date">
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label for="new-time">End Date</label>
+                                <input type="time" class="form-control" id="new-time">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group">    <!--this creates form to text to create task-->
+                                <label for="new-task">Task</label>
+                                <input type="text" class="form-control" id="new-task" placeholder="Task">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label for="new-total-hours">Total Hours</label>
+                                <input type="text" class="form-control" id="new-total-hours" placeholder="Total Hours">
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label for="new-total-calories">Total Calories Burned</label>
+                                <input type="text" class="form-control" id="new-total-calories" placeholder="Total Calories Burned">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button id="add" class="btn btn-primary form-control">Create</button>   <!--created div with button, created id named add -->
+                    </div>
+                    </div>
+                </div>
+                <table id="list" class="table table-dark table-striped text-light">
+                    <tr>
+                        <th>Task</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Total Hours</th>
+                        <th>Total Calories Burned</th>
+                        <th>Actions</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="projectt.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
